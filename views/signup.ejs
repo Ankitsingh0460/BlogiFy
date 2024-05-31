@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .btn1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <%- include('./partial/head') %>
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('./partial/navbar') %>
+    <H1>SignUp</H1>
+    <form class="mt-4 mx-5"  action="/user/signup" method="post">
+      <div class="mb-3  ">
+        <label for="exampleInputEmail1" class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fullName"
+          name="fullName"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="btn1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <%- include('./partial/script') %>
+  </body>
+</html>
