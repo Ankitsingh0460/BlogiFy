@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage: storage });
-
+//add blog route
 router.get("/add-blog", (req, res) => {
   return res.render("addBlog", {
     user: req.user,
